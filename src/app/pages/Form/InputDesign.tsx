@@ -82,7 +82,7 @@ export const InputDesign: React.FC = () => {
 
         try {
             // Отправляем данные на бэкенд
-            const response = await fetch('https://fbd6-185-143-147-136.ngrok-free.app/api/submit', {
+            const response = await fetch('/api/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
