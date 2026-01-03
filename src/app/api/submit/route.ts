@@ -46,12 +46,15 @@ export async function POST(req: Request) {
       message: 'Заявка отправлена',
     });
 
-  } catch (error: any) {
-    console.error('FORM ERROR:', error);
+} catch (error: unknown) {
+  console.error('FORM ERROR:', error);
 
-    return NextResponse.json(
-      { success: false, error: error.message },
-      { status: 500 }
-    );
-  }
+  const message =
+    error instanceof Error ? error.message : 'Unknown server error';
+
+  return NextResponse.json(
+    { success: false, error: message },
+    { status: 500 }
+  );
+}
 }
