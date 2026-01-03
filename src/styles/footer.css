@@ -1,0 +1,110 @@
+footer{
+    width: 100vw;
+    left: 0;
+    background-color: #202020;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    padding: 9.26vh 12.5vw;
+}
+
+.footer-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-buttons, .footer-nav{
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-section{
+    gap: 1.48vh;
+}
+
+.footer-nav{
+    max-width: 15.63vw;
+    flex-wrap: wrap;
+    gap: 0 0.94vw;
+    font-size: 1.25vw;
+}
+
+.footer-nav a {
+    cursor: pointer;
+}
+
+.social-buttons{
+    gap: 1.04vw;
+}
+
+.gradient-text{
+    font-size: 1.98vw;
+    text-transform: uppercase !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+@media screen and (max-width: 1024px){
+    footer{
+        padding: 3.92vh 4.76vw;
+    }
+
+    .footer-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1.33vh;
+    }
+
+    .menu-section{
+        gap: 1.33vh;
+    }
+
+    .footer-nav{
+        max-width: unset;
+        flex-direction: column;
+        gap: 1.33vh;
+        font-size: 2.86vw;
+    }
+
+    .social-buttons{
+        gap: 2.38vw;
+    }
+
+    .gradient-text{
+        font-size: 4.52vw;
+    }
+}
+
+@media screen and (max-width: 450px){
+    footer{
+        flex-direction: column;
+        padding: max(40px, 7.02vh) max(20px, 6.25vw);
+        align-items: center;
+        gap: max(40px, 7.02vh);
+    }
+
+    .footer-section{
+        gap: max(16px, 2.81vh);
+        align-items: center;
+    }
+
+    .footer-nav{
+        flex-direction: column;
+        text-align: center;
+        font-size: max(16px, 5vw);
+    }
+
+    .social-buttons{
+        gap: max(16px, 5vw);
+    }
+
+    .gradient-text{
+        font-size: max(28px, 8.75vw);
+    }
+}

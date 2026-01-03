@@ -1,0 +1,306 @@
+@import '../assets/fonts/Ermilov/ermilov.css';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow: hidden;
+}
+
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+body {
+    color: #fff;
+    background: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+}
+
+
+/* .webpage-content.overflowed{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden !important;
+} */
+
+.webpage-content{
+    pointer-events: none;
+}
+
+.webpage-content.overflowed {
+    /* Убираем все стили - они больше не нужны */
+}
+
+.background{
+    background: #000;
+}
+
+/* Блокируем скролл через body */
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+section {
+    min-height: 100vh;
+    position: relative;
+    background: #000;
+    padding: 0 12.5vw;
+    overflow: hidden;
+    height: fit-content;
+    z-index: 2;
+    pointer-events: initial;
+}
+
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3.28vw;
+    background: linear-gradient(90deg, #3FEF00 12.39%, #FFF 99.13%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Ermilov", sans-serif;
+}
+
+.section-title {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    position: relative;
+}
+
+.section-title.advantages {
+    padding-bottom: 11vh;
+}
+
+.invisible-trigger {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.nav-link, .footer-nav a {
+    background-size: 300% 100%;
+    background-position: 100% 0;
+    moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    color: transparent;
+    background-image: linear-gradient(to right, #3fef00, #fff, #fff, #fff);
+    background-clip: text;
+}
+
+.nav-link:hover, .footer-nav a:hover {
+    box-shadow: none;
+    background-position: 0 0;
+    moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+
+.nav-link:active, .footer-nav a:active {
+    background-image: linear-gradient(to right, #2A9C01, #2A9C01);
+}
+
+.primary-button {
+    cursor: pointer;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 0.83vw;
+    padding: 1.48vh 1.67vw;
+    display: flex;
+    position: relative;
+    border: none;
+    background-size: 300% 100%;
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #3fef00, #fff, #3fef00, #3fef00);
+}
+
+.primary-button-text {
+    color: #000;
+    font-size: 1.25vw;
+    position: relative;
+}
+
+
+.icon {
+    width: 1.25vw;
+    height: 1.25vw;
+    position: relative;
+}
+
+.primary-button:hover {
+    box-shadow: none;
+    background-position: 0 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.primary-button:active {
+    background-image: linear-gradient(to right, #2A9C01, #2A9C01);
+}
+
+
+.fade-in-section {
+    opacity: 0;
+
+    transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+    will-change: opacity, visibility;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+}
+
+input {
+    outline: none;
+}
+
+
+
+@keyframes revealUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hideDown {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    will-change: transform, opacity;
+}
+
+.reveal.visible {
+    animation: revealUp 0.8s ease-out forwards;
+}
+
+.reveal.hidden {
+    animation: hideDown 0.8s ease-out forwards;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    section {
+        padding: 0 2.38vw;
+        min-height: unset;
+    }
+
+    h1 {
+        font-size: 4.52vw;
+    }
+
+    .section-title {
+        padding-top: 0;
+        padding-bottom: 5vh;
+    }
+
+    .section-title.advantages {
+        padding-bottom: 11vh;
+    }
+
+    .primary-button {
+        gap: 1.9vw;
+        padding: 1.33vh 3.81vw;
+    }
+
+    .primary-button-text {
+        font-size: 2.86vw;
+    }
+
+
+    .icon {
+        width: 2.86vw;
+        height: 2.86vw;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 450px){
+
+    section {
+        padding: 0 max(20px, 6.25vw);
+    }
+
+
+    h1 {
+        font-size: max(21px, 6.35vw);
+    }
+
+    .section-title.advantages {
+        padding-bottom: 11vh;
+    }
+
+
+    .primary-button {
+        gap: max(16px, 5vw);
+        padding: max(16px, 2.81vh) max(50px, 15.63vw);
+
+    }
+
+    .primary-button-text {
+        font-size: max(16px, 5vw);
+    }
+
+
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+
+}
+

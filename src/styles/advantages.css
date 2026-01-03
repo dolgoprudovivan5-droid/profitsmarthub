@@ -1,0 +1,277 @@
+
+/*.advantages-wrapper {*/
+/*    flex-direction: column;*/
+/*    align-items: flex-start;*/
+/*    gap: 5.93vh;*/
+/*    width: 100%;*/
+/*    display: flex;*/
+/*    position: relative;*/
+/*    padding-top: 13.94vh;*/
+/*}*/
+
+/*.row {*/
+/*    justify-content: space-between;*/
+/*    align-self: stretch;*/
+/*    align-items: center;*/
+/*    display: flex;*/
+/*    position: relative;*/
+/*    height: 100vh;*/
+/*}*/
+
+/*.advantage-card {*/
+/*    border-radius: 8px;*/
+/*    width: 36.2vw;*/
+/*    height: 40vh;*/
+/*    background-position: center center !important;*/
+/*    background-size: cover !important;*/
+/*    position: relative;*/
+/*    padding: 2.78vh 1.56vw;*/
+/*    display: flex;*/
+/*    align-items: flex-end;*/
+/*    box-shadow:*/
+/*            0 3px 10px 0 #FFF inset,*/
+/*            0 5px 15px calc(5px * var(--glow, 0)) rgba(22, 76, 2, var(--glow, 0)) inset;*/
+/*    transition: box-shadow 0.1s linear;*/
+/*}*/
+
+/*.advantage-card:before{*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    width: 110%;*/
+/*    height: 30%;*/
+/*    border-radius: 8px;*/
+/*    background: #000;*/
+/*    filter: blur(20px);*/
+/*    z-index: 10;*/
+/*    left: -5%;*/
+/*    bottom: -10%;*/
+/*}*/
+
+/*.advantage-card:after{*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    border-radius: 11px;*/
+/*    border: 3px solid #222933;*/
+/*    z-index: 11;*/
+/*    top: -3px;*/
+/*    left: -3px;*/
+/*}*/
+
+/*.card-title {*/
+/*    color: #fff;*/
+/*    z-index: 11;*/
+/*    position: relative;*/
+/*    font-size: 1.46vw;*/
+/*}*/
+
+/*.left {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    border-radius: 8px;*/
+/*    width: 36.2vw;*/
+/*    height: 40vh;*/
+/*}*/
+
+/*.right {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    right: 0;*/
+/*    border-radius: 8px;*/
+/*    width: 36.2vw;*/
+/*    height: 40vh;*/
+
+/*}*/
+
+/*.fixed-card--left,*/
+/*.fixed-card--right {*/
+/*    position: fixed;*/
+/*    top: 50%;*/
+/*    transform: translateY(-50%);*/
+/*    z-index: 10;*/
+/*}*/
+
+/*!* side-specific offsets *!*/
+/*.fixed-card--left  { left: 12.5vw;  }*/
+/*.fixed-card--right { right: 12.5vw; }*/
+
+/*.fixed-card--end {*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*}*/
+
+/*.row:nth-child(1) { z-index: 1; }*/
+/*.row:nth-child(2) { z-index: 2; }*/
+/*.row:nth-child(3) { z-index: 3; }*/
+/*.row:nth-child(4) { z-index: 4; }*/
+
+
+/*@media screen and (max-width: 1025px){*/
+
+/*    .advantages-wrapper {*/
+/*        gap: 2.67vh;*/
+/*        padding-top: 12.5vh;*/
+/*    }*/
+
+/*    .advantage-card {*/
+/*        width: 46.43vw;*/
+/*        height: 25vh;*/
+/*        padding: 0.83vh 1.19vw;*/
+/*    }*/
+
+/*    .card-title {*/
+/*        font-size: 2.62vw;*/
+/*    }*/
+
+/*}*/
+
+.advantages-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-top: 20vh;
+}
+
+.row {
+    justify-content: space-between;
+    align-self: stretch;
+    align-items: center;
+    display: flex;
+    position: relative;
+    height: 80vh;
+}
+
+.row.last{
+    height: 80vh;
+}
+
+.advantage-card {
+    border-radius: 8px;
+    width: 36.2vw;
+    height: 40vh;
+    background-position: center center !important;
+    background-size: cover !important;
+    position: relative;
+    box-shadow: 0 3px 10px 0 #FFF inset;
+    padding: 2.78vh 1.56vw;
+    display: flex;
+    align-items: flex-end;
+}
+
+.advantage-card:before{
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 30%;
+    border-radius: 8px;
+    background: #000;
+    filter: blur(20px);
+    z-index: 10;
+    left: -5%;
+    bottom: -10%;
+}
+
+.advantage-card:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 11px;
+    border: 3px solid #222933;
+    z-index: 11;
+    top: -3px;
+    left: -3px;
+}
+
+.card-title {
+    color: #fff;
+    z-index: 11;
+    position: relative;
+    font-size: 1.46vw;
+}
+
+.left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+}
+
+.right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    border-radius: 8px;
+
+}
+
+@media screen and (max-width: 1024px){
+
+    .advantages-wrapper {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .row{
+        height: 50vh;
+    }
+
+    .advantage-card {
+        width: 46.43vw;
+        height: 25vh;
+        padding: 0.83vh 1.19vw;
+    }
+
+    .row.last{
+        height: 50vh;
+    }
+
+    .card-title {
+        font-size: 2.62vw;
+    }
+
+}
+
+@media screen and (max-width: 450px){
+
+    .advantages-wrapper {
+        gap: 3.23vh;
+        padding-top: 0;
+    }
+
+    .row {
+        height: 85vh;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .advantage-card {
+        width: 100%;
+        height: 32.26vh;
+        padding: 1.61vh 3.13vw;
+    }
+
+    .row.last{
+        height: 85vh;
+    }
+
+    .card-title {
+        font-size: 5vw;
+    }
+
+    .left, .right{
+        width: 100%;
+    }
+
+
+    .right {
+        left: 0;
+    }
+
+}
+
